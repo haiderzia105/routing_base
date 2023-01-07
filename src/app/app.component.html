@@ -1,0 +1,22 @@
+<h1>Navigation</h1>
+<br /><br />
+<a  routerLink="">Home</a>
+<br /><br />
+<a  routerLink="about">About</a>
+<br /><br />
+<a  routerLink="contact">Contact</a>
+<br /><br />
+<a  routerLink="contact/20">Peter</a>
+<br /><br />
+<a  routerLink="contact/30">Parker</a>
+<br /><br />
+<a  routerLink="contact/40">Pipe</a>
+<br /><br />
+
+<ul *ngFor="let item of users">
+    <li>{{item.name}}</li>
+</ul>
+<app-footer> </app-footer>
+
+
+<router-outlet></router-outlet>
