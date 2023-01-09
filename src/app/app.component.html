@@ -1,4 +1,4 @@
-<h1>Navigation</h1>
+<!-- <h1>Navigation</h1>
 <br /><br />
 <a  routerLink="">Home</a>
 <br /><br />
@@ -13,10 +13,43 @@
 <a  routerLink="contact/40">Pipe</a>
 <br /><br />
 
-<ul *ngFor="let item of users">
-    <li>{{item.name}}</li>
+<ul *ngFor="let item of more">
+    <li>{{item.name}} -- {{item.email}}</li>
 </ul>
-<app-footer> </app-footer>
+<app-footer> </app-footer> -->
+<!-- 
+<form #formGain="ngForm" (ngSubmit)="insertUserData(formGain.value)">
+    <br /><br />
+    <input type="text" ngModel name="name" placeholder="Name">
+    <br /><br />
+    <input type="text" ngModel name="email" placeholder="Email">
+    <br /><br />
+    <input type="text" ngModel name="address" placeholder="Address">
+    <br /><br />
+    <button>Register</button>
+</form> -->
 
+<!-- <router-outlet></router-outlet> -->
+<!-- <h1>Lazy Routes</h1>
+<br /><br />
+<ul>
+    <a routerLink="lazy/run">Lazy Run</a>
+    <br /><br />
+    <a routerLink="lazy/walk">Lazy Walk</a>
+</ul>
+<br /><br />
+<h1>Sharp Routes</h1>
+<br /><br />
+<ul>
+    <a routerLink="sharp/run">Sharp Run</a>
+    <br /><br />
+    <a routerLink="sharp/walk">Sharp Walk</a>
+</ul>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+<h1>Lazy Load a Component</h1>
+<button (click)="loadContact()">Load Contact</button>
+<br /><br />
+<button (click)="loadContactMe()">Load Contact Me</button>
+<br /><br />

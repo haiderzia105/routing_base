@@ -9,8 +9,8 @@ import { UserdataService } from '../services/userdata.service';
 export class FooterComponent {
 
   users:any;
-  constructor(private userdata:UserdataService){
-    console.warn("userdata", userdata.users());
-    this.users= userdata.users();
-  }
+  // constructor(private userdata:UserdataService){
+  //   console.warn("userdata", userdata.users());
+  //   this.users= userdata.users();
+  // }
 }

@@ -8,30 +8,37 @@ import { ContactCompanyComponent } from './contact-company/contact-company.compo
 import { ContactMeComponent } from './contact-me/contact-me.component';
 
 const routes: Routes = [
+// {
+//    path:'',
+//    component:HomeComponent, 
+// },
+// {
+//   path:'about',
+//   component: AboutComponent, 
+// },
+// {
+//   path:'contact',
+//   component: ContactComponent, 
+// },
+// {
+//   path:'contact/:id',
+//   component: ContactComponent, 
+//   children:[
+//     {path:"company" , component:ContactCompanyComponent},
+//     {path:"me" , component:ContactMeComponent},
+//   ]
+// },
+// {
+//   path:'**',
+//   component: NoPageComponent, 
+// },
+
 {
-   path:'',
-   component:HomeComponent, 
+  path:'lazy', loadChildren:()=>import('./lazy/lazy.module').then(mod=>mod.LazyModule),
 },
 {
-  path:'about',
-  component: AboutComponent, 
-},
-{
-  path:'contact',
-  component: ContactComponent, 
-},
-{
-  path:'contact/:id',
-  component: ContactComponent, 
-  children:[
-    {path:"company" , component:ContactCompanyComponent},
-    {path:"me" , component:ContactMeComponent},
-  ]
-},
-{
-  path:'**',
-  component: NoPageComponent, 
-},
+  path:'sharp', loadChildren:()=>import('./sharp/sharp.module').then(mod=>mod.SharpModule),
+}
 ];
 
 @NgModule({
